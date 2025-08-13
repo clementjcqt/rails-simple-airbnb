@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>List of all flats</h1>
+  <div class="cards d-flex gap-3">
+    <% @flats.each do |flat| %>
+      <div class="card" style="width: 18rem;">
+        <img src="https://kalogirourealestate.com/wp-content/uploads/2022/05/Holiday-Home-2-10.12.20.jpg" class="card-img-top" alt="photo d'une villa">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text"><%= flat.description %></p>
+          <p class="card-text fw-bold"><%= flat.address %></p>
+          <div class="footer-card d-flex justify-content-between">
+            <p class="card-text fw-bold"><%= flat.price_per_night %></p>
+            <p class="card-text"><%= flat.number_of_guests %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
